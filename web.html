@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Alia!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body class="bg-pink-50 min-h-screen overflow-hidden font-sans">
+    <!-- Countdown Container -->
+    <div id="countdown-container" class="countdown-container">
+        <h1 class="countdown-title">Alia's Birthday Countdown!</h1>
+        <div class="countdown-timer">
+            <div class="countdown-box">
+                <div id="days" class="countdown-value">00</div>
+                <div class="countdown-label">Days</div>
+            </div>
+            <div class="countdown-box">
+                <div id="hours" class="countdown-value">00</div>
+                <div class="countdown-label">Hours</div>
+            </div>
+            <div class="countdown-box">
+                <div id="minutes" class="countdown-value">00</div>
+                <div class="countdown-label">Minutes</div>
+            </div>
+            <div class="countdown-box">
+                <div id="seconds" class="countdown-value">00</div>
+                <div class="countdown-label">Seconds</div>
+            </div>
+        </div>
+        <p class="countdown-message">The surprise begins when the timer hits zero. Stay Tuned!</p>
+    </div>
+    
+    <!-- Scene 1: Glitchy Loading -->
+    <div id="scene1" class="scene bg-gradient-to-br from-pink-200 to-pink-300">
+        <h1 class="text-4xl md:text-6xl font-bold text-pink-700 mb-8 glitch-text">Preparing It...</h1>
+        <div class="spinner w-16 h-16 border-4 border-pink-500 border-t-transparent rounded-full mb-8"></div>
+        <p class="text-pink-600 text-lg">Loading Alia's questionable life choices...</p>
+    </div>
+    
+    <!-- Scene 2: Photo Montage -->
+    <div id="scene2" class="scene bg-gradient-to-br from-pink-100 to-pink-200">
+        <h2 class="text-3xl md:text-4xl font-bold text-pink-700 mb-8">The Many Faces of Alia</h2>
+        
+        <div class="relative w-full max-w-md h-64 md:h-96 mb-8">
+            <!-- Photo 1 -->
+            <div id="photo1" class="absolute inset-0 photo-frame bounce-photo" style="display: none;">
+                <img src="photo_1_2025-05-26_20-28-58.jpg" alt="Alia being weird" class="w-full h-full object-cover">
+                <div class="absolute bottom-0 left-0 right-0 bg-pink-500 bg-opacity-80 text-white p-2">
+                    <p class="text-sm">Exhibit A: What even is this?</p>
+                </div>
+            </div>
+            
+            <!-- Photo 2 -->
+            <div id="photo2" class="absolute inset-0 photo-frame bounce-photo" style="display: none;">
+                <img src="photo_2_2025-05-26_20-28-58.jpg" alt="Alia being embarrassing" class="w-full h-full object-cover">
+                <div class="absolute bottom-0 left-0 right-0 bg-pink-500 bg-opacity-80 text-white p-2">
+                    <p class="text-sm">Exhibit B: Why would you do this?</p>
+                </div>
+            </div>
+            
+            <!-- Photo 3 -->
+            <div id="photo3" class="absolute inset-0 photo-frame bounce-photo" style="display: none;">
+                <img src="photo_3_2025-05-26_20-28-58.jpg" alt="Alia being awkward" class="w-full h-full object-cover">
+                <div class="absolute bottom-0 left-0 right-0 bg-pink-500 bg-opacity-80 text-white p-2">
+                    <p class="text-sm">Exhibit C: Peak performance</p>
+                </div>
+            </div>
+            
+            <!-- Photo 4 -->
+            <div id="photo4" class="absolute inset-0 photo-frame bounce-photo" style="display: none;">
+                <img src="photo_4_2025-05-26_20-28-58.jpg" alt="Alia's funny face" class="w-full h-full object-cover">
+                <div class="absolute bottom-0 left-0 right-0 bg-pink-500 bg-opacity-80 text-white p-2">
+                    <p class="text-sm">Exhibit D: No thoughts, head empty</p>
+                </div>
+            </div>
+            
+            <!-- Photo 5 -->
+            <div id="photo5" class="absolute inset-0 photo-frame bounce-photo" style="display: none;">
+                <img src="photo_5_2025-05-26_20-28-58.jpg" alt="Alia being crazy" class="w-full h-full object-cover">
+                <div class="absolute bottom-0 left-0 right-0 bg-pink-500 bg-opacity-80 text-white p-2">
+                    <p class="text-sm">Exhibit E: Certified chaotic</p>
+                </div>
+            </div>
+            
+            <!-- Photo 6 -->
+            <div id="photo6" class="absolute inset-0 photo-frame bounce-photo" style="display: none;">
+                <img src="photo_6_2025-05-26_20-28-58.jpg" alt="Alia happy" class="w-full h-full object-cover">
+                <div class="absolute bottom-0 left-0 right-0 bg-pink-500 bg-opacity-80 text-white p-2">
+                    <p class="text-sm">Exhibit F: Rare happy moment</p>
+                </div>
+            </div>
+            
+            <!-- Photo 7 -->
+            <div id="photo7" class="absolute inset-0 photo-frame bounce-photo" style="display: none;">
+                <img src="photo_7_2025-05-26_20-28-58.jpg" alt="Alia sleeping" class="w-full h-full object-cover">
+                <div class="absolute bottom-0 left-0 right-0 bg-pink-500 bg-opacity-80 text-white p-2">
+                    <p class="text-sm">Exhibit G: Beauty sleep</p>
+                </div>
+            </div>
+            
+            <!-- Photo 8 -->
+            <div id="photo8" class="absolute inset-0 photo-frame bounce-photo" style="display: none;">
+                <img src="photo_8_2025-05-26_20-28-58.jpg" alt="Alia surprised" class="w-full h-full object-cover">
+                <div class="absolute bottom-0 left-0 right-0 bg-pink-500 bg-opacity-80 text-white p-2">
+                    <p class="text-sm">Exhibit H: Pikachu face</p>
+                </div>
+            </div>
+        </div>
+        
+        <p class="text-pink-600">We have evidence. So much evidence.</p>
+    </div>
+    
+    <!-- Scene 3: Text Explosion -->
+    <div id="scene3" class="scene bg-gradient-to-br from-pink-300 to-pink-400">
+        <h2 class="text-4xl md:text-6xl font-bold text-white mb-8 shake-text">What have you become, Alia?</h2>
+        
+        <!-- Floating emojis -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+            <div class="float-emoji text-4xl absolute" style="left: 10%; top: 20%;">💀</div>
+            <div class="float-emoji text-4xl absolute" style="left: 30%; top: 40%; animation-delay: 0.5s;">🤣</div>
+            <div class="float-emoji text-4xl absolute" style="left: 70%; top: 30%; animation-delay: 1s;">🫠</div>
+            <div class="float-emoji text-4xl absolute" style="left: 50%; top: 60%; animation-delay: 1.5s;">😭</div>
+            <div class="float-emoji text-4xl absolute" style="left: 20%; top: 70%; animation-delay: 2s;">🤪</div>
+            <div class="float-emoji text-4xl absolute" style="left: 80%; top: 50%; animation-delay: 2.5s;">👀</div>
+            <div class="float-emoji text-4xl absolute" style="left: 40%; top: 20%; animation-delay: 3s;">🙃</div>
+        </div>
+    </div>
+    
+    <!-- Scene 4: Fake Heartfelt Moment -->
+    <div id="scene4" class="scene bg-gradient-to-br from-pink-100 to-pink-200">
+        <div class="max-w-2xl">
+            <h2 class="text-4xl md:text-5xl font-bold text-pink-700 mb-8 fade-in" style="animation-delay: 1s;">But still...</h2>
+            <p class="text-2xl md:text-3xl text-pink-600 fade-in" style="animation-delay: 2.5s;">we love you <span class="text-4xl">🥹</span></p>
+            <p class="text-lg text-pink-500 mt-8 fade-in" style="animation-delay: 4s;">(Mostly. Sometimes. When you're not being weird.)</p>
+        </div>
+    </div>
+    
+    <!-- Scene 5: Final Birthday Message -->
+    <div id="scene5" class="scene bg-gradient-to-br from-pink-200 to-pink-300">
+        <h1 class="text-5xl md:text-7xl font-bold text-pink-700 mb-6">Happy Birthday, Alia!</h1>
+        <p class="text-xl md:text-2xl text-pink-600 mb-8">You survived another year of this madness.</p>
+        
+        <!-- Confetti container -->
+        <div id="confetti-container" class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none"></div>
+        
+        <!-- Replay button -->
+        <button id="replay-btn" class="mt-12 bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-6 rounded-full transition-all transform hover:scale-105 slow-transition">
+            Watch Again? 🔄
+        </button>
+        
+        <!-- Credits section -->
+        <div class="credits fade-in" style="animation-delay: 2s;">
+            Made by Hadi
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

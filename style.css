@@ -1,0 +1,212 @@
+
+        /* Custom Animations */
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-3px, 3px); }
+            40% { transform: translate(-3px, -3px); }
+            60% { transform: translate(3px, 3px); }
+            80% { transform: translate(3px, -3px); }
+            100% { transform: translate(0); }
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-20px) scale(1.05); }
+        }
+        
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+            20%, 40%, 60%, 80% { transform: translateX(5px); }
+        }
+        
+        @keyframes flash {
+            0%, 50%, 100% { opacity: 1; }
+            25%, 75% { opacity: 0.3; }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+            100% { transform: translateY(0) rotate(0deg); }
+        }
+        
+        @keyframes confetti-fall {
+            0% { transform: translateY(-100vh) rotate(0deg); }
+            100% { transform: translateY(100vh) rotate(360deg); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        /* Element Classes */
+        .glitch-text {
+            animation: glitch 0.5s linear infinite;
+        }
+        
+        .spinner {
+            animation: spin 1.5s linear infinite;
+        }
+        
+        .bounce-photo {
+            animation: bounce 2s ease-in-out infinite;
+        }
+        
+        .shake-text {
+            animation: shake 0.8s ease-in-out infinite, flash 1.5s ease-in-out infinite;
+        }
+        
+        .fade-in {
+            animation: fadeIn 3s ease-in forwards;
+        }
+        
+        .float-emoji {
+            animation: float 4s ease-in-out infinite;
+        }
+        
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #f472b6;
+            animation: confetti-fall 6s linear infinite;
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        /* Scene Transitions */
+        .scene {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 1.5s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .active-scene {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        .photo-frame {
+            border: 15px solid #f9a8d4;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .photo-frame::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(244, 114, 182, 0.1) 0%, rgba(249, 168, 212, 0.3) 50%, rgba(244, 114, 182, 0.1) 100%);
+        }
+        
+        /* Slower transitions */
+        .slow-transition {
+            transition-duration: 2s;
+        }
+        
+        /* Credits section */
+        .credits {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            color: #9d174d;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        /* Countdown styles */
+        .countdown-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #f9a8d4 0%, #f472b6 100%);
+            color: white;
+            z-index: 1000;
+            transition: opacity 1s ease-out;
+        }
+        
+        .countdown-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .countdown-timer {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .countdown-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .countdown-value {
+            font-size: 3.5rem;
+            font-weight: bold;
+            background: rgba(255,255,255,0.2);
+            border-radius: 10px;
+            padding: 0.5rem 1.5rem;
+            min-width: 100px;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            backdrop-filter: blur(5px);
+        }
+        
+        .countdown-label {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .countdown-message {
+            font-size: 1.2rem;
+            max-width: 500px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .hidden {
+            display: none;
+        }
