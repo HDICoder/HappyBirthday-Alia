@@ -40,9 +40,6 @@
             const targetDate = new Date(currentYear, 5, 1, 0, 0, 0);
             
             // If we're already past May 31st this year, set target for next year
-           // if (now > targetDate) {
-             //   return new Date(currentYear + 1, 5, 1, 0, 0, 0);
-            //}
             
             return targetDate;
         }
